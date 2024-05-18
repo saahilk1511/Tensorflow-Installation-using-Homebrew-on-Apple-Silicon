@@ -21,11 +21,11 @@ eg: conda init  zsh
 ## Create a Virtual Environment 
 ```
 conda create -n <env_name> python=<version>
-eg: conda create -n tfd python=3.9.6
+eg: conda create -n tensorflow python=3.9.6
 ```
 Activate Environment
 ```
-conda	activate tfd
+conda	activate tensorflow
 ```
 
 ## Install TensorFlow in the Virtual Environment 
@@ -39,7 +39,7 @@ python -m pip install tensorflow-metal
 ## Register environment 
 ```
 pip install ipykernel
-python -m ipykernel install --user --name tfd --display-name "Python 3.9.6 (tfd)"
+python -m ipykernel install --user --name tensorflow --display-name "Python 3.9.6 (tensorflow)"
 jupyter kernelspec list
 ```
 
@@ -111,8 +111,8 @@ tf.config.experimental.list_physical_devices()
 ## Remove Virtual Environment
 ```
 conda info --envs
-deactivate tfd
-conda remove --name tfd --all
+deactivate tensorflow
+conda remove --name tensorflow --all
 ```
 
 ## Uninstallation miniforge
