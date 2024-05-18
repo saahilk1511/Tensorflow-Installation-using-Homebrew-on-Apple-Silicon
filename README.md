@@ -116,7 +116,7 @@ print(f"\nNumPy Path {np.__path__}")
 tf.config.experimental.list_physical_devices()
 ```
 
-🚨 Note: The following steps outline how to remove the virtual environment and miniforge. The guide to installing TensorFlow with GPU support ends here. You can skip these next steps.
+🚨 Note: The guide to installing TensorFlow with GPU support ends here(steps 1-9). The following steps outline how to remove the virtual environment and miniforge. You can skip these next steps.
 
 ## 1. Remove Virtual Environment
 Deactivate and delete the created conda virtual environment.
