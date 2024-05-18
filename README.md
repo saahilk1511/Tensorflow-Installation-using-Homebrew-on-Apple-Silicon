@@ -126,7 +126,7 @@ deactivate tensorflow
 conda remove --name tensorflow --all
 ```
 
-## 2. Uninstallation miniforge
+## 2. Uninstall miniforge
 Remove all traces of miniforge from your system, including configuration files and directories.
 
 Any modifications to your shell rc files that were made by Miniforge. Use this first command to see what rc files will be updated
