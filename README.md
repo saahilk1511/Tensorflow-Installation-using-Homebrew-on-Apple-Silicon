@@ -17,7 +17,7 @@ brew install --cask miniforge
 Initialize conda for your shell to enable environment management and restart the terminal.
 ```
 conda init <shell-name>
-eg: conda init  zsh
+eg: conda init zsh
 ```
 
 ## Create a Virtual Environment 
