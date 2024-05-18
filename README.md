@@ -61,12 +61,13 @@ pip install polars
 pip install keras-tuner --upgrade
 pip install xgboost
 pip install statsmodels
+pip install pyspark
+
+## LightGBM with GPU
 pip install --no-binary lightgbm --config-settings=cmake.define.USE_OPENMP=OFF --config-settings=cmake.define.USE_GPU=ON 'lightgbm>=4.0.0'
 
 ## NLP Libraries
-
 pip install nltk
-pip install pyspark
 pip install regex
 pip install spacy
 pip install stop-words 
