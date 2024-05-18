@@ -41,7 +41,7 @@ python -m pip install tensorflow-metal
 ```
 
 ## 6. Register environment
-Register the newly created environment to the kernel using this command. This links the new **tensorflow** environment to the Jupyter Notebook
+Register the newly created environment to the kernel using this command. This links the new <u>**tensorflow**</u> environment to the Jupyter Notebook. 
 ```
 pip install ipykernel
 python -m ipykernel install --user --name tensorflow --display-name "Python 3.9.6 (tensorflow)"
@@ -95,7 +95,7 @@ Verify if the GPU is available for TensorFlow and print the versions of installe
 import sys
 import tensorflow.keras
 import pandas as pd
-Import polars as pl
+import polars as pl
 import numpy as np
 import sklearn as sk
 import scipy as sp
