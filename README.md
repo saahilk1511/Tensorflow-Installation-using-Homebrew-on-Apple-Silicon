@@ -55,19 +55,23 @@ pip install scikit-learn  --upgrade
 pip install scipy  --upgrade
 pip install plotly  --upgrade
 pip install seaborn
-pip install afinn
-pip install beautifulsoup4
+
+## Optional
 pip install polars
 pip install keras-tuner --upgrade
 pip install xgboost
 pip install statsmodels
 pip install pyspark
 
-## LightGBM with GPU
+## LightGBM with GPU support
 pip install --no-binary lightgbm --config-settings=cmake.define.USE_OPENMP=OFF --config-settings=cmake.define.USE_GPU=ON 'lightgbm>=4.0.0'
 
 ## NLP Libraries
 pip install nltk
+pip install afinn
+pip install beautifulsoup4
+pip install bs4
+pip install gensim
 pip install regex
 pip install spacy
 pip install stop-words 
@@ -76,7 +80,7 @@ pip install textacy
 
 ## Testing the environment
 
-Almost there! Let's just make sure everything is setup and works fine! Jump in to a new Jupyter notebook using this command:
+Open a new Jupyter Notebook using this command:
 
 ```
 jupyter notebook
@@ -87,7 +91,6 @@ jupyter notebook
 ``` python
 import sys
 import tensorflow.keras
-import lightgbm as lgb
 import pandas as pd
 Import polars as pl
 import numpy as np
