@@ -129,17 +129,17 @@ conda remove --name tensorflow --all
 ## 2. Uninstall miniforge
 Remove all traces of miniforge from your system, including configuration files and directories.
 
-Any modifications to your shell rc files that were made by Miniforge. Use this first command to see what rc files will be updated
+1). Any modifications to your shell rc files that were made by Miniforge. Use this first command to see what rc files will be updated
 ```
 conda init --reverse --dry-run
 ```
 
-Use this next command to take action on the rc files listed above
+Use this next command to take action on the rc files listed above. Temporarily IGNORE the shell message. For changes to take effect, close and re-open your current shell, and CLOSE THE SHELL ONLY AFTER the 3rd step below is completed. 
 ```
 conda init --reverse
 ```
 
-Temporarily IGNORE the shell message. For changes to take effect, close and re-open your current shell, and CLOSE THE SHELL ONLY AFTER the 3rd step below is completed. Remove the folder and all subfolders where the base environment for Miniforge was installed
+2). Remove the folder and all subfolders where the base environment for Miniforge was installed
 ```
 CONDA_BASE_ENVIRONMENT=$(conda info --base)
 echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
@@ -150,7 +150,7 @@ echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
 rm -rf ${CONDA_BASE_ENVIRONMENT}
 ```
 
-Any global conda configuration files that are left behind
+3). Any global conda configuration files that are left behind
 ```
 echo ${HOME}/.condarc will be removed if it exists
 rm -f "${HOME}/.condarc"
