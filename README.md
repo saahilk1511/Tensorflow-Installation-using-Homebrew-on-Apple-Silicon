@@ -1,37 +1,38 @@
 # Tensorflow-Installation-using-Homebrew-on-Apple-Silicon
 Tensorflow Installation with GPU support using Homebrew on Apple Silicon (tested on M1 and M2)
 
-## Install Homebrew
+## 1. Install Homebrew
 Download and install Homebrew, the package manager for macOS, using the provided command in the Terminal.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Install miniforge
+## 2. Install miniforge
 Use Homebrew to install miniforge, a conda package manager for setting up environments.
 ```
 brew install --cask miniforge
 ```
 
-## Setup your shell
+## 3. Setup your shell
 Initialize conda for your shell to enable environment management and restart the terminal.
 ```
 conda init <shell-name>
 eg: conda init zsh
 ```
 
-## Create a Virtual Environment 
+## 4. Create a Virtual Environment 
 Create and activate a new conda virtual environment with Python.
 ```
 conda create -n <env_name> python=<version>
 eg: conda create -n tensorflow python=3.9.6
 ```
-Activate Environment
+### 4.1 Activate Environment
 ```
-conda	activate tensorflow
+conda activate <env_name>
+eg: conda activate tensorflow
 ```
 
-## Install TensorFlow in the Virtual Environment 
+## 5. Install TensorFlow in the Virtual Environment 
 Install TensorFlow and its dependencies tailored for Apple Silicon within the virtual environment.
 ```
 conda install -c apple tensorflow-deps
@@ -39,7 +40,7 @@ python -m pip install tensorflow-macos
 python -m pip install tensorflow-metal
 ```
 
-## Register environment
+## 6. Register environment
 Register the newly created environment to the kernel using this command. This links the new **tensorflow** environment to the Jupyter Notebook
 ```
 pip install ipykernel
@@ -47,7 +48,7 @@ python -m ipykernel install --user --name tensorflow --display-name "Python 3.9.
 jupyter kernelspec list
 ```
 
-## Install Jupyter Notebook and common packages
+## 7. Install Jupyter Notebook and common packages
 Install Jupyter Notebook and a list of common Python packages for data science and machine learning.
 ```
 conda install notebook -y
@@ -82,13 +83,13 @@ pip install stop-words
 pip install textacy
 ```
 
-## Testing the environment
+## 8. Testing the environment
 Open a new Jupyter Notebook using this command:
 ```
 jupyter notebook
 ```
 
-## Check GPU availability
+## 9. Check GPU availability
 Verify if the GPU is available for TensorFlow and print the versions of installed packages.
 ``` python
 import sys
@@ -115,9 +116,9 @@ print(f"\nNumPy Path {np.__path__}")
 tf.config.experimental.list_physical_devices()
 ```
 
-🚨 Note: The following steps outline how to remove the virtual environment and miniforge. You can skip these steps.
+🚨 Note: The following steps outline how to remove the virtual environment and miniforge. The guide to installing TensorFlow with GPU support ends here. You can skip these next steps.
 
-## Remove Virtual Environment
+## 1. Remove Virtual Environment
 Deactivate and delete the created conda virtual environment.
 ```
 conda info --envs
@@ -125,7 +126,7 @@ deactivate tensorflow
 conda remove --name tensorflow --all
 ```
 
-## Uninstallation miniforge
+## 2. Uninstallation miniforge
 Remove all traces of miniforge from your system, including configuration files and directories.
 
 Any modifications to your shell rc files that were made by Miniforge. Use this first command to see what rc files will be updated
@@ -144,7 +145,7 @@ CONDA_BASE_ENVIRONMENT=$(conda info --base)
 echo The next command will delete all files in ${CONDA_BASE_ENVIRONMENT}
 ```
 
-🚨 Warning: the rm command below is irreversible! check the output of the echo command above. To make sure you are deleting the correct directory
+🚨 Warning: the rm command below is irreversible! Check the output of the echo command above. To make sure you are deleting the correct directory
 ```
 rm -rf ${CONDA_BASE_ENVIRONMENT}
 ```
