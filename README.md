@@ -63,7 +63,8 @@ pip install xgboost
 pip install statsmodels
 pip install --no-binary lightgbm --config-settings=cmake.define.USE_OPENMP=OFF --config-settings=cmake.define.USE_GPU=ON 'lightgbm>=4.0.0'
 
-NLP Libraries 
+## NLP Libraries
+
 pip install nltk
 pip install pyspark
 pip install regex
